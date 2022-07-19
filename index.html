@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="JavaScript-Assignment-1" content="JavaScript-Assignment-1" />
+    <title>JavaScript-Assignment-1</title>
+  </head>
+  <body>
+    <h1>JavaScript-Assignment-1</h1>
+    <p>Date: 18-07-22</p>
+
+    <script>
+      // (1) . Write a program to print Factorial of any number---------------------------------------------------------------
+      //   Factorial formula:- n! = n * (n-1) * (n-2)* (n-3)*(n-4)..........
+
+      //   function fact(n) {
+      //     let ans = 1;
+      //     if (n == 0 || n == 1) {
+      //       return ans; //if n value is out of  0 or 1, return 1
+      //     } else {
+      //       for (var i = n; i >= 1; i--) {
+      //         //condition declaration
+      //         ans = ans * i;
+      //       }
+      //       return ans;
+      //     }
+      //   }
+      //   let n = 6; //Global variable declaration
+      //   ans = fact(n);
+      //   document.write("The factorial of " + n + " is " + ans);
+
+      // (2) Write a program in JAVASCRIPT to print Fibonacci series. 0, 1, 1, 2, 3, 5, 8, 13, 21, 34------------------------------------------------------
+      //Formula:-F1=1:
+      //                Fn = F n-1+F n-2
+
+      // for (let i = 1; i <= 4; i++) {
+      //   console.log(n1);
+      //   nextTerm = n1 + n2;
+      //   n1 = n2;
+      //   n2 = nextTerm;
+      // }
+
+      // (3) Write a program to find whether a number is Armstrong or not------------------------not solved due to decimal number----------------------
+      // Formula:- An Armstrong number of three digits is an integer such that the sum of the cubes of its digits is equal to the number itself.
+      // Ex:- n = number(128) = 1***1 + 2***2 + 8***8
+      //   if number and n value is equal, then number is armstrong number
+
+      let number = prompt("Enter any numbers", "");
+      let ans = number; //store value of entered number into ans variable
+      let sum = 0;
+
+      debugger;
+      while (ans > 0) {
+        let digit = ans % 10; //it returns remind value- ex:- 128 - remind value is 8
+        sum += digit ** 3; // here in 1st loop sum=8, second loop sum =8+1, last sum 9 += 125 = total sum of 3 digit is 125
+        ans = ans / 10; //here 128/10= 12.8 ---------------------------got stuck here-----------------------
+      }
+
+      if (number == sum) {
+        alert("This is an amstrong number");
+      } else {
+        alert("This is not an amstrong number");
+      }
+
+      //  (4) Write a program to print Reverse of any number----------------------------------------------------------------------------
+
+      // let a = prompt("Enter any number", " ");
+
+      // for (; a >= 0; a--) { //a value will minus by one in every loop until a value becomes equal to zero
+      //   document.write(a + "<br>");
+      // }
+
+      // (5) To check whether a number is Prime or not.----------------------------------------------------------------------------------
+      //a number that is divisible only by itself and 1 (e.g. 2, 3, 5, 7, 11).
+
+      // let number = prompt("Enter any number", "");
+
+      // if (number < 0) {
+      //   alert(`${number} is not a prime number`);
+      // } else {
+      //   for (let i = 2; i < number; i++) {
+      //     if (number % i == 0) {
+      //       let result = alert(`${number} is not a prime number`);
+      //       break;
+      //     } else {
+      //       let result = alert(`${number} is a prime number`);
+      //       break;
+      //     }
+      //   }
+      //   alert(result);
+      // }
+
+      // (6) Program to find whether a year is LEAP year or not---------------------------------------------------------------------------
+      // a year, occurring once every four years, which has 366 days including 29 February as an intercalary day.
+
+      // let year = prompt(
+      //   "Enter any year to check  year is leap year or not",
+      //   ""
+      // );
+
+      // if (year % 4 == 0) {
+      //   alert(year + " is a Leap year");
+      // } else {
+      //   alert(year + " is not a Leap year");
+      // }
+
+      // (7)  Program to print the below format---------------------------------------------------------------------------------------------
+      // * * * * *
+      // * * * *
+      // * * *
+      // * *
+      // *
+      // for (var a = 5; a >= 1; a--) {//row
+      //   for (var b = 1; b <= a; b++) //Column
+      //     document.write(a + "* ");
+      //   }
+      //   document.write("<br>");
+      // }
+
+      // (8)  Program to print the below format------------------------------------------------------------------------------------------------
+      // 1 2 3 4 5
+      // 1 2 3 4
+      // 1 2 3
+      // 1 2
+      // 1
+
+      // for (var a = 5; a >= 1; a--) { //row
+      //   for (var b = 1; b <= a; b++) { //Column
+      //     document.write(b + " ");
+      //   }
+      //   document.write("<br>");
+      // }
+
+      // (9) Program to print below format-----------------------------------------------------------------------------------------------------
+      // *
+      // * *
+      // * * *
+      // * * * *
+      // * * * * *
+      // for (a = 1; a <= 5; a++) { //rows
+      //   debugger;
+      //   for (b = 1; b <= a; b++) { //column
+      //     document.write(b + "<b>");
+      //   }
+      //   document.write("<br>");
+      // }
+
+      //(10)  Write a program to find factor of any number--------------------------------------------------------------------------------------
+      // To be the factors of a number, the factor number should
+      // exactly divide the number (with 0 remainder).
+      // Ex:-
+      // The factor of 12 is 1,2,3.4.6. and 12 (12/12=0, 12/2=0........)
+      //
+      //Ans:-
+      // document.write("<b>");
+      // document.write(`Factors of given  number as per below:-  <br> <br>`);
+      // document.write("</b>");
+
+      // function factor(Number) {
+      //   for (a = 1; a <= Number; a++) {
+      //     //counting a number from 1 to itself
+      //     if (Number % a == 0) {
+      //       document.write(a + "<br>");
+      //     }
+      //   }
+      // }
+
+      // factor(10);
+
+      // (11) Write a program to find table of a number----------------------------------------------------------------------------------------------------
+
+      // let Number = prompt("Enter number to find table of any number", "")
+
+      // function table(number) {
+      //   document.write(
+      //     "Table of " +
+      //       number +
+      //       " number, given as per below :" +
+      //       "<br>" +
+      //       "<br>"
+      //   );
+      //   for (let a = 1; a <= 10; a++) {
+      //     let result = number * a + "<br>";
+      //     document.write(number + " * " + a + " = " + "<b>" + result + "</b>");
+      //   }
+      // }
+
+      // table(10);
+
+      // (12) Write a Program to swap two numbers in JAVASCRIPT.------------------------------------------------------------------------------------------
+
+      // function swap() {
+      //   let a = 2;
+      //   let b = 4;
+      //   let c = a; //c =2
+      //   a = b; //a =4
+      //   b = c; //b = 2
+      //   document.write("a = " + a + "<br>");
+      //   document.write("b = " + b);
+      // }
+
+      // swap();
+
+      // (13) Write a Program to swap two numbers in JAVASCRIPT without using third variable.---------------------------------------------------------------
+      // let a = 5;
+      // let b = 10;
+
+      // function swap() {
+      //   b = a + b; //b =15
+      //   a = b - a; //a = 10
+      //   b = b - a; //b = 5
+
+      //   document.write("a = " + a + "<br>");
+      //   document.write("b = " + b);
+      // }
+
+      // swap();
+
+      // (41) Write a program for this pattern ?----------------------------------------------------------------------------------------------------------------
+      // *****
+      // *****
+      // *****
+      // *****
+      // *****
+
+      // function newpattern() {
+      //   let columnPattern = 5; //we need 5 column
+      //   let rowPattern = 5; //we need 5 row
+
+      //   for (b = 1; b <= rowPattern; b++) {//outer function row
+      //     for (a = 1; a <= columnPattern; a++) {//inner function column
+      //       document.write("*");
+      //     }
+      //     document.write("<br>");//To break the Loop
+      //   }
+      // }
+      // newpattern(); // Calling a function
+      //
+      //
+    </script>
+  </body>
+</html>
